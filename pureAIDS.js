@@ -14,6 +14,14 @@ function GetKontHaar(n){
 }
 
 
+
+
+
+
+
+
+
+
 function VerifyNicePerson(name){
 	//WARNING: this function may behave inaccurately on windows clients when name equals "Bill Gates".
 	boolean henk = false;
