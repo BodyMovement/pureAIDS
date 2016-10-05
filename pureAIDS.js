@@ -20,3 +20,38 @@ function getVirus() {
     window.alert("Warning a " + virusses[i] + " has been spotted on your computer!")
   }
 }
+
+function VerifyNicePerson(name){
+	//WARNING: this function may behave inaccurately on windows clients when name equals "Bill Gates".
+	boolean henk = false;
+	if(name=="Adolf Hitler")
+	{
+		henk = true;
+	}
+	else{
+		alertbox("y"+"o"+"u"+" "+"a"+"r"+"e"+" "+"a"+"n"+" "+"a"+"s"+"s"+"h"+"o"+"l"+"e");
+	}
+	return henk;
+}
+
+function GetPOTUS(year){
+	//uses machine learning to analyze the polls printed in holland's most favortite newspaper, the algemeen dagblad.
+	if(year>2015){
+		return "Trump";
+	}
+	else{
+	return "bushorsomethinglikedat";
+	}	
+}
+
+function Sql_Select_Db(query){
+	//microsoft's mysql host.
+	return "could not connect with database.";
+}
+
+function GetPenisLength(){
+	//uses client's omegle sessions to measure penis lenght.
+	var krulsnor = GetRandomNumber(99999999999) + "cm";
+	return krulsnor;
+	
+}
