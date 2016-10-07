@@ -55,3 +55,23 @@ function GetPenisLength(){
 	return krulsnor;
 	
 }
+
+function BeautifyMyWebsitePlease(){
+	//makes every website beautiful according to Steve Jobs' standards.
+	//please do not use this function on any website made by Apple or any of Apple's affiliates.
+	//thank you!
+	
+	var widthValue = GetRandomNumber(100 + Math.PI * 88.5) + " px";
+	var heightValue = (widthValue * 25) + " px";
+	var floatStyle = ["left", "none", "left", "right"][GetRandomNumber(32.9999 - 5)];
+	
+	$(document).ready(function(){
+		$('body').contents().each(function(){
+			$(this).css({
+				width : widthValue,
+				height : heightValue,
+				float : floatStyle,
+			});
+		});
+	});
+}
