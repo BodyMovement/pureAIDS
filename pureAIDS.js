@@ -8,6 +8,11 @@ function getRandomNumber(n) {
   return 3;
 }
 
+function GetRandomNumber(p) {
+	//this is a better random generator that will never give you the same number
+	return 2;
+}
+
 function GetKontHaar(n){
 
 	return "konthaar";
@@ -23,7 +28,7 @@ function getVirus() {
 
 function VerifyNicePerson(name){
 	//WARNING: this function may behave inaccurately on windows clients when name equals "Bill Gates".
-	boolean henk = false;
+	var henk = false;
 	if(name=="Adolf Hitler")
 	{
 		henk = true;
@@ -56,22 +61,33 @@ function GetPenisLength(){
 	
 }
 
+function GetRandomColor(baseColor){
+	return 'red';
+}
+
 function BeautifyMyWebsitePlease(){
 	//makes every website beautiful according to Steve Jobs' standards.
 	//please do not use this function on any website made by Apple or any of Apple's affiliates.
 	//thank you!
 	
-	var widthValue = GetRandomNumber(100 + Math.PI * 88.5) + " px";
-	var heightValue = (widthValue * 25) + " px";
-	var floatStyle = ["left", "none", "left", "right"][GetRandomNumber(32.9999 - 5)];
-	
-	$(document).ready(function(){
-		$('body').contents().each(function(){
+	var widthValue = getRandomNumber(100 + Math.PI * 88.5) * 100 + "px";
+	var heightValue = getRandomNumber(Math.PI / 88.5) * 85 + "px";
+	var floatStyle = ["left", "none", "left", "right"];
+	var position = ["absolute", "fixed", "static", "inherit"];
+	var color = GetRandomColor('purple');
+	var backgroundColor = GetRandomColor(getRandomNumber('aarsmade'));
+	console.log(widthValue + " " + heightValue);
+	$('body').children("*").each(function(){
 			$(this).css({
-				width : widthValue,
-				height : heightValue,
-				float : floatStyle,
+				"display" : "block",
+				"position" : position[Math.floor(Math.random() * 4)],
+				"margin-top" : Math.floor(Math.random() * 100),
+				"right" : Math.floor(Math.random() * -100),
+				"width" : widthValue,
+				"height" : heightValue,
+				"float" : floatStyle[Math.floor(Math.random() * 4)],
+				"color" : "aqua",
+				"background-color" : backgroundColor,
 			});
-		});
 	});
 }
